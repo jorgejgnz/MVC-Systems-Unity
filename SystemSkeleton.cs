@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using UnityEngine;
 using UnityEngine.Events;
-using static JorgeJGnz.Abstracts.GlobalView;
+using static JorgeJGnz.Skeletons.GlobalView;
 
-namespace JorgeJGnz.Abstracts
+namespace JorgeJGnz.Skeletons
 {
     // Global classes
     public class GlobalModel : MonoBehaviour { }
-    public class GlobalView  : MonoBehaviour{ }
+    public class GlobalView : MonoBehaviour{ }
     public class GlobalController : MonoBehaviour { }
 
     // Custom events
@@ -29,7 +29,7 @@ namespace JorgeJGnz.Abstracts
     // Persistent model: Persistent between scenes and launches
     public class Persistent
     {
-        string persistentValueKey = "persistent";
+        string persistentValueKey = "key";
 
         public int persistentValue
         {
@@ -55,7 +55,7 @@ namespace JorgeJGnz.Abstracts
     }
 
     // Configuration model: Can be shared between models. Cannot be modified in build
-    [CreateAssetMenu(menuName = "JesbReadingGame/Skeleton Asset", order = 1)]
+    [CreateAssetMenu(menuName = "JorgeJGnz/Skeleton Asset", order = 1)]
     public class Asset : ScriptableObject
     {
         public int configurationValue = 0;
@@ -201,13 +201,13 @@ namespace JorgeJGnz.Abstracts
 
             /*
 			
-			model.viewFromOtherSystem.onOtherEvent.AddListener(DoSth)
-			
-			or
-			
-			OtherSystemView.singleton.onOtherEvent.AddListener(DoSth)
-			
-			*/
+		model.viewFromOtherSystem.onOtherEvent.AddListener(DoSth)
+
+		or
+
+		OtherSystemView.singleton.onOtherEvent.AddListener(DoSth)
+
+	    */
 
             // Async persistent data access
             model.persistent.GetMyIpAsync();
