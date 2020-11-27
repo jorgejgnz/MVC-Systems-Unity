@@ -1,4 +1,4 @@
-# Skeleton of isolated systems (MVC) for Unity
+# Isolated systems (MVC) for Unity
 
 **Entity Component System (ECS)** is the pattern that is used in Unity's data-oriented tech stack. This data-oriented philosophy comes from the need of parallelization and optimization in videogames.
 
@@ -11,6 +11,20 @@ These patterns follow different philosophies and they are not intended to be com
 - It doesn't listen to events invoked from scene-specific components
 - It contains data that other systems or scene-specific components can read
 - It invokes its own evemts, which can be listened by other systems or otherr scene-specific components
+
+# Content
+- Functional MVC system (SimpleSystem)
+- Skeleton for systems with hierarchical models
+- Skeleton for modular systems
+- Network and file parsing helpers
+- Demo scene with a scene-specific component that interacts with SimpleSystem
+
+# Getting started
+1. Clone this repository or get the latest released package.
+1. Copy these files or import the package into your Unity project.
+1. Press play:
+- CustomComponent will print your IP and the number of times you played the scene.
+- CustomComponent has a button (custom inpsector) that changes the color of a cube.
 
 ## Model
 
